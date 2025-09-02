@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>MoviePlanet</title>
+
+    <style>
+      #inputs {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <nav>
+        <a href="/">
+          <h1 class="brand">MoviePlanet</h1>
+        </a>
+
+        <div>
+          <!-- padre -->
+          <select name="" id="">
+            <!-- hijos children -->
+            <option value="en">Inglés</option>
+            <option value="es" selected>Español</option>
+          </select>
+
+          <a href="/public/views/home.html" role="button">Iniciar sesión</a>
+        </div>
+      </nav>
+    </header>
+
+    <main>
+      <!-- hero -->
+      <section id="hero">
+        <h2>Unlimited ovies TV, Shows and More.</h2>
+        <p>Watch anywhere and cancel anytime.</p>
+
+        <form class="register-form">
+          <p>
+            Ready to watch? Enter your email to create or restart your
+            membership .
+          </p>
+
+          <div>
+            <input type="text" placeholder="Correo electronico" />
+            <button>Comenzar ahora ></button>
+          </div>
+        </form>
+      </section>
+
+      <!-- tranding now -->
+      <section id="tranding-now">
+        <h2>En tendencia ahora</h2>
+
+        <ol>
+          <li>
+            <article>
+              <a href="/public/views/movie.html">
+                <span>1</span>
+                <img
+                  src="https://occ-0-446-3934.1.nflxso.net/dnm/api/v6/mAcAr9TxZIVbINe88xb3Teg5_OA/AAAABcHJcGqPCSCOpDGBpZGhNYi5UneJQf0bdW90F3jHBu9WyBin2i3LFft4q6qOAZQghACnN7wTBOEMc4TiUgJIMIe-tfaDYxE5EKE.webp"
+                  alt="Amsterdam caratula"
+                />
+              </a>
+            </article>
+          </li>
+
+          <li>
+            <article>
+              <span>2</span>
+              <img
+                src="https://occ-0-446-3934.1.nflxso.net/dnm/api/v6/mAcAr9TxZIVbINe88xb3Teg5_OA/AAAABRhpHnfh6ia4QcotnBIjOTFL15LZcxTPjXf5VFU_E_ayrXSswVPM_vAfqrmSoUqf-gC_bRjsC6918GtEasl95dPq6PmppVAHtndE5xrFBIzsX0JVN6c9w-0AVT1lkdh3b6Xa.webp"
+                alt="Wednesday caratula"
+              />
+            </article>
+          </li>
+
+          <li>
+            <article>
+              <span>3</span>
+              <img
+                src="https://occ-0-446-3934.1.nflxso.net/dnm/api/v6/mAcAr9TxZIVbINe88xb3Teg5_OA/AAAABcHJcGqPCSCOpDGBpZGhNYi5UneJQf0bdW90F3jHBu9WyBin2i3LFft4q6qOAZQghACnN7wTBOEMc4TiUgJIMIe-tfaDYxE5EKE.webp"
+                alt="Amsterdam caratula"
+              />
+            </article>
+          </li>
+
+          <li>
+            <article>
+              <span>4</span>
+              <img
+                src="https://occ-0-446-3934.1.nflxso.net/dnm/api/v6/mAcAr9TxZIVbINe88xb3Teg5_OA/AAAABRhpHnfh6ia4QcotnBIjOTFL15LZcxTPjXf5VFU_E_ayrXSswVPM_vAfqrmSoUqf-gC_bRjsC6918GtEasl95dPq6PmppVAHtndE5xrFBIzsX0JVN6c9w-0AVT1lkdh3b6Xa.webp"
+                alt="Wednesday caratula"
+              />
+            </article>
+          </li>
+
+          <li>
+            <article>
+              <span>3</span>
+              <img
+                src="https://occ-0-446-3934.1.nflxso.net/dnm/api/v6/mAcAr9TxZIVbINe88xb3Teg5_OA/AAAABcHJcGqPCSCOpDGBpZGhNYi5UneJQf0bdW90F3jHBu9WyBin2i3LFft4q6qOAZQghACnN7wTBOEMc4TiUgJIMIe-tfaDYxE5EKE.webp"
+                alt="Amsterdam caratula"
+              />
+            </article>
+          </li>
+        </ol>
+      </section>
+
+      <!-- more reasons to join -->
+      <section id="more-reasons-to-join">
+        <ul>
+          <li>
+            <h3>Enjoy on your TV</h3>
+            <p>
+              Watch on Smart TVs, Playstation, Xbox, Chromecast, Apple TV,
+              Blu-ray players, and more.
+            </p>
+
+            <span>🍔</span>
+          </li>
+
+          <li>
+            <h3>Download your shows to watch offline</h3>
+            <p>
+              Save your favorites easily and always have something to watch.
+            </p>
+
+            <span>🍕</span>
+          </li>
+
+          <li>
+            <h3>Watch everywhere</h3>
+            <p>
+              Stream unlimited movies and TV shows on your phone, tablet,
+              laptop, and TV.
+            </p>
+
+            <span>🌮</span>
+          </li>
+
+          <li>
+            <h3>Create profiles for kids</h3>
+            <p>
+              Send kids on adventures with their favorite characters in a space
+              made just for them — free with your membership.
+            </p>
+
+            <span>🥡</span>
+          </li>
+        </ul>
+      </section>
+    </main>
+
+    <footer>
+      <p>MoviePlanet. 2025</p>
+    </footer>
+  </body>
+</html>
