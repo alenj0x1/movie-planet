@@ -5,19 +5,192 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>MoviePlanet</title>
 
+    <link rel="stylesheet" href="/public/styles/normalize.css" />
+    <link rel="stylesheet" href="/public/styles/global.css" />
+
+    <!-- estilo usando un elemento -->
     <style>
-      #inputs {
+      .header {
+        position: absolute;
+        padding: 5px 15px;
+        right: 0;
+        left: 0;
+      }
+
+      #brand {
+        color: white;
+        text-decoration: none;
+      }
+
+      #hero {
+        background: linear-gradient(
+            90deg,
+            rgba(7, 7, 7, 0.95),
+            rgba(10, 10, 10, 0.4)
+          ),
+          url("https://assets.nflxext.com/ffe/siteui/vlv3/8d617e19-3c3c-4c28-8998-c9b14dbc7200/web/EC-en-20250901-TRIFECTA-perspective_27b047ba-b61d-4455-9987-101305f4618c_small.jpg");
+        height: 100vh;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 10px;
+      }
+
+      #hero h2 {
+        max-width: 300px;
+        text-align: center;
+        font-size: 2rem;
+        margin: 0;
+      }
+
+      #hero p {
+        margin: 0;
+      }
+
+      .register-form {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+      }
+
+      .register-form-buttons {
+        display: flex;
+        gap: 10px;
+      }
+
+      /* Sections */
+      #tranding-now,
+      #more-reasons-to-join {
+        margin: 20px;
+      }
+
+      #tranding-now ol,
+      #more-reasons-to-join ul {
+        width: 100%;
+      }
+
+      #tranding-now {
         display: flex;
         flex-direction: column;
         gap: 10px;
       }
+
+      #tranding-now h2 {
+        margin: 0;
+      }
+
+      #tranding-now ol {
+        padding: 0;
+        margin: 0;
+        display: flex;
+        flex-wrap: wrap;
+        gap: 40px;
+      }
+
+      .movie {
+        position: relative;
+        transition-duration: 200ms;
+      }
+
+      .movie:hover {
+        transform: scale(1.03);
+        transition-duration: 200ms;
+      }
+
+      .movie:active > .movie-number {
+        font-size: 4.5rem;
+      }
+
+      .movie-number {
+        position: absolute;
+        bottom: 0;
+        margin-bottom: 10px;
+        font-size: 4rem;
+        left: -10px;
+        color: black;
+        -webkit-text-stroke-width: 2px;
+        -webkit-text-stroke-color: white;
+        font-weight: bold;
+        transition-duration: 200ms;
+      }
+
+      #more-reasons-to-join {
+        display: flex;
+      }
+
+      #more-reasons-to-join ul {
+        margin: 0;
+        list-style: none;
+        color: white;
+        padding: 0;
+        display: flex;
+        flex-direction: column;
+        gap: 40px;
+      }
+
+      .reason {
+        padding: 30px 20px;
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        background: rgba(50, 50, 50, 0.15);
+        border: 1px solid rgba(61, 61, 61, 0.25);
+        border-radius: 15px;
+        position: relative;
+        overflow: hidden;
+      }
+
+      .reason:hover {
+        background: rgba(50, 50, 50, 0.22);
+      }
+
+      .reason:hover > .reason-icon {
+        font-size: 3.5rem;
+        transform: rotate(-45deg);
+        transition-duration: 200ms;
+      }
+
+      .reason header {
+        display: flex;
+        flex-direction: column;
+        gap: 5px;
+        margin-bottom: 60px;
+      }
+
+      .reason-icon {
+        font-size: 3rem;
+        align-self: end;
+        position: absolute;
+        bottom: 0;
+        right: 0;
+        margin: 20px;
+        transition-duration: 200ms;
+      }
+
+      .reason-icon-blur {
+        filter: blur(60px);
+        font-size: 5rem;
+        right: 40px;
+        bottom: 40px;
+      }
+
+      .reason h3,
+      .reason p {
+        margin: 0;
+      }
+
+      .reason p {
+        color: rgb(139, 139, 139);
+      }
     </style>
   </head>
   <body>
-    <header>
+    <header class="header">
       <nav>
-        <a href="/">
-          <h1 class="brand">MoviePlanet</h1>
+        <a href="/" id="brand">
+          <h1>MoviePlanet</h1>
         </a>
 
         <div>
@@ -36,8 +209,8 @@
     <main>
       <!-- hero -->
       <section id="hero">
-        <h2>Unlimited ovies TV, Shows and More.</h2>
-        <p>Watch anywhere and cancel anytime.</p>
+        <h2>Unlimited movies TV, Shows and More</h2>
+        <p>Starts at USD 5.99. Cancel anytime.</p>
 
         <form class="register-form">
           <p>
@@ -45,9 +218,13 @@
             membership .
           </p>
 
-          <div>
-            <input type="text" placeholder="Correo electronico" />
-            <button>Comenzar ahora ></button>
+          <div class="register-form-buttons">
+            <input
+              class="input input-primary"
+              type="text"
+              placeholder="Correo electronico"
+            />
+            <button class="btn btn-primary">Get started ></button>
           </div>
         </form>
       </section>
@@ -58,9 +235,9 @@
 
         <ol>
           <li>
-            <article>
+            <article class="movie">
               <a href="/public/views/movie.html">
-                <span>1</span>
+                <span class="movie-number">1</span>
                 <img
                   src="https://occ-0-446-3934.1.nflxso.net/dnm/api/v6/mAcAr9TxZIVbINe88xb3Teg5_OA/AAAABcHJcGqPCSCOpDGBpZGhNYi5UneJQf0bdW90F3jHBu9WyBin2i3LFft4q6qOAZQghACnN7wTBOEMc4TiUgJIMIe-tfaDYxE5EKE.webp"
                   alt="Amsterdam caratula"
@@ -70,8 +247,8 @@
           </li>
 
           <li>
-            <article>
-              <span>2</span>
+            <article class="movie">
+              <span class="movie-number">2</span>
               <img
                 src="https://occ-0-446-3934.1.nflxso.net/dnm/api/v6/mAcAr9TxZIVbINe88xb3Teg5_OA/AAAABRhpHnfh6ia4QcotnBIjOTFL15LZcxTPjXf5VFU_E_ayrXSswVPM_vAfqrmSoUqf-gC_bRjsC6918GtEasl95dPq6PmppVAHtndE5xrFBIzsX0JVN6c9w-0AVT1lkdh3b6Xa.webp"
                 alt="Wednesday caratula"
@@ -80,8 +257,8 @@
           </li>
 
           <li>
-            <article>
-              <span>3</span>
+            <article class="movie">
+              <span class="movie-number">3</span>
               <img
                 src="https://occ-0-446-3934.1.nflxso.net/dnm/api/v6/mAcAr9TxZIVbINe88xb3Teg5_OA/AAAABcHJcGqPCSCOpDGBpZGhNYi5UneJQf0bdW90F3jHBu9WyBin2i3LFft4q6qOAZQghACnN7wTBOEMc4TiUgJIMIe-tfaDYxE5EKE.webp"
                 alt="Amsterdam caratula"
@@ -90,8 +267,8 @@
           </li>
 
           <li>
-            <article>
-              <span>4</span>
+            <article class="movie">
+              <span class="movie-number">4</span>
               <img
                 src="https://occ-0-446-3934.1.nflxso.net/dnm/api/v6/mAcAr9TxZIVbINe88xb3Teg5_OA/AAAABRhpHnfh6ia4QcotnBIjOTFL15LZcxTPjXf5VFU_E_ayrXSswVPM_vAfqrmSoUqf-gC_bRjsC6918GtEasl95dPq6PmppVAHtndE5xrFBIzsX0JVN6c9w-0AVT1lkdh3b6Xa.webp"
                 alt="Wednesday caratula"
@@ -100,8 +277,38 @@
           </li>
 
           <li>
-            <article>
-              <span>3</span>
+            <article class="movie">
+              <span class="movie-number">5</span>
+              <img
+                src="https://occ-0-446-3934.1.nflxso.net/dnm/api/v6/mAcAr9TxZIVbINe88xb3Teg5_OA/AAAABcHJcGqPCSCOpDGBpZGhNYi5UneJQf0bdW90F3jHBu9WyBin2i3LFft4q6qOAZQghACnN7wTBOEMc4TiUgJIMIe-tfaDYxE5EKE.webp"
+                alt="Amsterdam caratula"
+              />
+            </article>
+          </li>
+
+          <li>
+            <article class="movie">
+              <span class="movie-number">6</span>
+              <img
+                src="https://occ-0-446-3934.1.nflxso.net/dnm/api/v6/mAcAr9TxZIVbINe88xb3Teg5_OA/AAAABRhpHnfh6ia4QcotnBIjOTFL15LZcxTPjXf5VFU_E_ayrXSswVPM_vAfqrmSoUqf-gC_bRjsC6918GtEasl95dPq6PmppVAHtndE5xrFBIzsX0JVN6c9w-0AVT1lkdh3b6Xa.webp"
+                alt="Wednesday caratula"
+              />
+            </article>
+          </li>
+
+          <li>
+            <article class="movie">
+              <span class="movie-number">7</span>
+              <img
+                src="https://occ-0-446-3934.1.nflxso.net/dnm/api/v6/mAcAr9TxZIVbINe88xb3Teg5_OA/AAAABcHJcGqPCSCOpDGBpZGhNYi5UneJQf0bdW90F3jHBu9WyBin2i3LFft4q6qOAZQghACnN7wTBOEMc4TiUgJIMIe-tfaDYxE5EKE.webp"
+                alt="Amsterdam caratula"
+              />
+            </article>
+          </li>
+
+          <li>
+            <article class="movie">
+              <span class="movie-number">8</span>
               <img
                 src="https://occ-0-446-3934.1.nflxso.net/dnm/api/v6/mAcAr9TxZIVbINe88xb3Teg5_OA/AAAABcHJcGqPCSCOpDGBpZGhNYi5UneJQf0bdW90F3jHBu9WyBin2i3LFft4q6qOAZQghACnN7wTBOEMc4TiUgJIMIe-tfaDYxE5EKE.webp"
                 alt="Amsterdam caratula"
@@ -115,49 +322,88 @@
       <section id="more-reasons-to-join">
         <ul>
           <li>
-            <h3>Enjoy on your TV</h3>
-            <p>
-              Watch on Smart TVs, Playstation, Xbox, Chromecast, Apple TV,
-              Blu-ray players, and more.
-            </p>
+            <article class="reason">
+              <header>
+                <h3>Enjoy on your TV</h3>
+                <p>
+                  Watch on Smart TVs, Playstation, Xbox, Chromecast, Apple TV,
+                  Blu-ray players, and more.
+                </p>
+              </header>
 
-            <span>🍔</span>
+              <span class="reason-icon">🍔</span>
+              <span class="reason-icon reason-icon-blur">🍔</span>
+            </article>
           </li>
 
           <li>
-            <h3>Download your shows to watch offline</h3>
-            <p>
-              Save your favorites easily and always have something to watch.
-            </p>
+            <article class="reason">
+              <header>
+                <h3>Download your shows to watch offline</h3>
+                <p>
+                  Save your favorites easily and always have something to watch.
+                </p>
+              </header>
 
-            <span>🍕</span>
+              <span class="reason-icon">🍕</span>
+              <span class="reason-icon reason-icon-blur">🍕</span>
+            </article>
           </li>
 
           <li>
-            <h3>Watch everywhere</h3>
-            <p>
-              Stream unlimited movies and TV shows on your phone, tablet,
-              laptop, and TV.
-            </p>
+            <article class="reason">
+              <header>
+                <h3>Watch everywhere</h3>
+                <p>
+                  Stream unlimited movies and TV shows on your phone, tablet,
+                  laptop, and TV.
+                </p>
+              </header>
 
-            <span>🌮</span>
+              <span class="reason-icon">🌮</span>
+              <span class="reason-icon reason-icon-blur">🌮</span>
+            </article>
           </li>
 
           <li>
-            <h3>Create profiles for kids</h3>
-            <p>
-              Send kids on adventures with their favorite characters in a space
-              made just for them — free with your membership.
-            </p>
+            <article class="reason">
+              <header>
+                <h3>Create profiles for kids</h3>
+                <p>
+                  Send kids on adventures with their favorite characters in a
+                  space made just for them — free with your membership.
+                </p>
+              </header>
 
-            <span>🥡</span>
+              <span class="reason-icon">🥡</span>
+              <span class="reason-icon reason-icon-blur">🥡</span>
+            </article>
           </li>
         </ul>
       </section>
     </main>
 
-    <footer>
+    <footer class="footer">
       <p>MoviePlanet. 2025</p>
+      <span class="created-by"
+        >Created by
+        <a
+          class="created-by-author"
+          href="https://github.com/alenj0x1/movie-planet"
+          target="_blank"
+          >alenj0x1</a
+        >
+      </span>
+
+      <span class="created-by"
+        >Source:
+        <a
+          class="created-by-author"
+          href="https://github.com/alenj0x1"
+          target="_blank"
+          >Github</a
+        >
+      </span>
     </footer>
   </body>
 </html>

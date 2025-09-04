@@ -4,36 +4,83 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>MoviePlanet - Inicio</title>
+
+    <link rel="stylesheet" href="/public/styles/global.css" />
+
+    <style>
+      .movie {
+        position: relative;
+        width: max-content;
+      }
+
+      .movie-tag {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: max-content;
+        padding: 5px 14px;
+        position: absolute;
+      }
+
+      .movie-tag-top {
+        top: 0;
+        left: 0;
+        margin-left: 10px;
+        background-color: white;
+      }
+
+      .movie-tag-bottom {
+        bottom: 0;
+        left: 0;
+        margin-bottom: 30px;
+        background-color: rgb(255, 37, 37);
+      }
+
+      .movie-tag span {
+        color: rgb(255, 72, 72);
+        font-weight: 700;
+        font-size: 1.2rem;
+      }
+
+      .movie-tag-bottom span {
+        color: white;
+        font-size: 1rem;
+      }
+    </style>
   </head>
   <body>
+    <a href="#">
+      <button class="to-top">🔼</button>
+    </a>
+
     <header>
       <nav>
         <a href="/">
           <h1 class="brand">MoviePlanet</h1>
         </a>
 
-        <ul>
-          <li>
+        <ul class="nav-list">
+          <li class="nav-item">
             <a href="/">Inicio</a>
           </li>
 
-          <li>
+          <li class="nav-item">
             <a href="">Series</a>
           </li>
 
-          <li>
+          <li class="nav-item">
             <a href="">Peliculas</a>
           </li>
 
-          <li>
+          <li class="nav-item">
             <a href="">Novedades populares</a>
           </li>
 
-          <li>
+          <li class="nav-item">
             <a href="">Mi lista</a>
           </li>
 
-          <li>
+          <li class="nav-item">
             <a href="">Explora por idiomas</a>
           </li>
         </ul>
@@ -45,40 +92,50 @@
         <h2>Trading now</h2>
 
         <section class="movies">
-          <article>
-            <img
-              src="https://resizing.flixster.com/C37haWxoxG5HqqIx3RRrc8N047k=/fit-in/352x330/v2/https://resizing.flixster.com/-XZAfHZM39UwaGJIFWKAE8fS0ak=/v3/t/assets/p11682476_b_h8_af.jpg"
-            />
-
-            <section class="movie-top" aria-label="Pelicula en tendencia">
-              <span>TOP</span>
-              <span>10</span>
-            </section>
-          </article>
-
-          <article>
+          <article class="movie">
             <img
               src="https://resizing.flixster.com/C37haWxoxG5HqqIx3RRrc8N047k=/fit-in/352x330/v2/https://resizing.flixster.com/-XZAfHZM39UwaGJIFWKAE8fS0ak=/v3/t/assets/p11682476_b_h8_af.jpg"
             />
 
             <section
-              class="movie-top"
+              class="movie-tag movie-tag-top"
+              aria-label="Pelicula en tendencia"
+            >
+              <span>TOP</span>
+              <span>10</span>
+            </section>
+          </article>
+
+          <article class="movie">
+            <img
+              src="https://resizing.flixster.com/C37haWxoxG5HqqIx3RRrc8N047k=/fit-in/352x330/v2/https://resizing.flixster.com/-XZAfHZM39UwaGJIFWKAE8fS0ak=/v3/t/assets/p11682476_b_h8_af.jpg"
+            />
+
+            <section
+              class="movie-tag movie-tag-bottom"
               aria-label="Nueva temporada de esta serie"
             >
               <span>New season</span>
             </section>
           </article>
 
-          <article>
+          <article class="movie">
             <img
               src="https://resizing.flixster.com/C37haWxoxG5HqqIx3RRrc8N047k=/fit-in/352x330/v2/https://resizing.flixster.com/-XZAfHZM39UwaGJIFWKAE8fS0ak=/v3/t/assets/p11682476_b_h8_af.jpg"
             />
           </article>
 
-          <article>
+          <article class="movie">
             <img
               src="https://resizing.flixster.com/C37haWxoxG5HqqIx3RRrc8N047k=/fit-in/352x330/v2/https://resizing.flixster.com/-XZAfHZM39UwaGJIFWKAE8fS0ak=/v3/t/assets/p11682476_b_h8_af.jpg"
             />
+
+            <section
+              class="movie-tag movie-tag-bottom"
+              aria-label="Nueva temporada de esta serie"
+            >
+              <span>New season</span>
+            </section>
           </article>
         </section>
       </section>
@@ -87,28 +144,28 @@
         <h2>Las 10 peliculas mås populares en Argentina hoy</h2>
 
         <section>
-          <article>
+          <article class="movie">
             <span>1</span>
             <img
               src="https://resizing.flixster.com/C37haWxoxG5HqqIx3RRrc8N047k=/fit-in/352x330/v2/https://resizing.flixster.com/-XZAfHZM39UwaGJIFWKAE8fS0ak=/v3/t/assets/p11682476_b_h8_af.jpg"
             />
           </article>
 
-          <article>
+          <article class="movie">
             <span>2</span>
             <img
               src="https://resizing.flixster.com/C37haWxoxG5HqqIx3RRrc8N047k=/fit-in/352x330/v2/https://resizing.flixster.com/-XZAfHZM39UwaGJIFWKAE8fS0ak=/v3/t/assets/p11682476_b_h8_af.jpg"
             />
           </article>
 
-          <article>
+          <article class="movie">
             <span>3</span>
             <img
               src="https://resizing.flixster.com/C37haWxoxG5HqqIx3RRrc8N047k=/fit-in/352x330/v2/https://resizing.flixster.com/-XZAfHZM39UwaGJIFWKAE8fS0ak=/v3/t/assets/p11682476_b_h8_af.jpg"
             />
           </article>
 
-          <article>
+          <article class="movie">
             <span>4</span>
             <img
               src="https://resizing.flixster.com/C37haWxoxG5HqqIx3RRrc8N047k=/fit-in/352x330/v2/https://resizing.flixster.com/-XZAfHZM39UwaGJIFWKAE8fS0ak=/v3/t/assets/p11682476_b_h8_af.jpg"
