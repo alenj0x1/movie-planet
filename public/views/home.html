@@ -5,83 +5,44 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>MoviePlanet - Inicio</title>
 
+    <link rel="stylesheet" href="/public/styles/normalize.css" />
     <link rel="stylesheet" href="/public/styles/global.css" />
-
-    <style>
-      .movie {
-        position: relative;
-        width: max-content;
-      }
-
-      .movie-tag {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        width: max-content;
-        padding: 5px 14px;
-        position: absolute;
-      }
-
-      .movie-tag-top {
-        top: 0;
-        left: 0;
-        margin-left: 10px;
-        background-color: white;
-      }
-
-      .movie-tag-bottom {
-        bottom: 0;
-        left: 0;
-        margin-bottom: 30px;
-        background-color: rgb(255, 37, 37);
-      }
-
-      .movie-tag span {
-        color: rgb(255, 72, 72);
-        font-weight: 700;
-        font-size: 1.2rem;
-      }
-
-      .movie-tag-bottom span {
-        color: white;
-        font-size: 1rem;
-      }
-    </style>
+    <link rel="stylesheet" href="/public/styles/views/home.css" />
   </head>
   <body>
     <a href="#">
       <button class="to-top">🔼</button>
     </a>
 
-    <header>
+    <header class="header">
       <nav>
-        <a href="/">
-          <h1 class="brand">MoviePlanet</h1>
+        <a id="brand" href="/">
+          <h1>MoviePlanet</h1>
         </a>
 
         <ul class="nav-list">
           <li class="nav-item">
-            <a href="/">Inicio</a>
+            <a href="/" class="nav-item-link">Inicio</a>
           </li>
 
           <li class="nav-item">
-            <a href="">Series</a>
+            <a href="" class="nav-item-link">Series</a>
           </li>
 
           <li class="nav-item">
-            <a href="">Peliculas</a>
+            <a href="" class="nav-item-link">Peliculas</a>
           </li>
 
           <li class="nav-item">
-            <a href="">Novedades populares</a>
+            <a href="" class="nav-item-link">Novedades populares</a>
           </li>
 
           <li class="nav-item">
-            <a href="">Mi lista</a>
+            <a href="" class="nav-item-link">Mi lista</a>
           </li>
 
           <li class="nav-item">
-            <a href="">Explora por idiomas</a>
+            <a href="" class="nav-item-link">Explora por idiomas</a>
           </li>
         </ul>
       </nav>
@@ -141,32 +102,66 @@
       </section>
 
       <section id="movies-top">
+        <h2>Las 10 peliculas mås populares en Ecuador hoy</h2>
+
+        <section class="movies">
+          <article class="movie">
+            <span class="movie-number">1</span>
+            <img
+              src="https://resizing.flixster.com/C37haWxoxG5HqqIx3RRrc8N047k=/fit-in/352x330/v2/https://resizing.flixster.com/-XZAfHZM39UwaGJIFWKAE8fS0ak=/v3/t/assets/p11682476_b_h8_af.jpg"
+            />
+          </article>
+
+          <article class="movie">
+            <span class="movie-number">2</span>
+            <img
+              src="https://resizing.flixster.com/C37haWxoxG5HqqIx3RRrc8N047k=/fit-in/352x330/v2/https://resizing.flixster.com/-XZAfHZM39UwaGJIFWKAE8fS0ak=/v3/t/assets/p11682476_b_h8_af.jpg"
+            />
+          </article>
+
+          <article class="movie">
+            <span class="movie-number">3</span>
+            <img
+              src="https://resizing.flixster.com/C37haWxoxG5HqqIx3RRrc8N047k=/fit-in/352x330/v2/https://resizing.flixster.com/-XZAfHZM39UwaGJIFWKAE8fS0ak=/v3/t/assets/p11682476_b_h8_af.jpg"
+            />
+          </article>
+
+          <article class="movie">
+            <span class="movie-number">4</span>
+            <img
+              src="https://resizing.flixster.com/C37haWxoxG5HqqIx3RRrc8N047k=/fit-in/352x330/v2/https://resizing.flixster.com/-XZAfHZM39UwaGJIFWKAE8fS0ak=/v3/t/assets/p11682476_b_h8_af.jpg"
+            />
+          </article>
+        </section>
+      </section>
+
+      <section id="movies-top">
         <h2>Las 10 peliculas mås populares en Argentina hoy</h2>
 
-        <section>
+        <section class="movies">
           <article class="movie">
-            <span>1</span>
+            <span class="movie-number">1</span>
             <img
               src="https://resizing.flixster.com/C37haWxoxG5HqqIx3RRrc8N047k=/fit-in/352x330/v2/https://resizing.flixster.com/-XZAfHZM39UwaGJIFWKAE8fS0ak=/v3/t/assets/p11682476_b_h8_af.jpg"
             />
           </article>
 
           <article class="movie">
-            <span>2</span>
+            <span class="movie-number">2</span>
             <img
               src="https://resizing.flixster.com/C37haWxoxG5HqqIx3RRrc8N047k=/fit-in/352x330/v2/https://resizing.flixster.com/-XZAfHZM39UwaGJIFWKAE8fS0ak=/v3/t/assets/p11682476_b_h8_af.jpg"
             />
           </article>
 
           <article class="movie">
-            <span>3</span>
+            <span class="movie-number">3</span>
             <img
               src="https://resizing.flixster.com/C37haWxoxG5HqqIx3RRrc8N047k=/fit-in/352x330/v2/https://resizing.flixster.com/-XZAfHZM39UwaGJIFWKAE8fS0ak=/v3/t/assets/p11682476_b_h8_af.jpg"
             />
           </article>
 
           <article class="movie">
-            <span>4</span>
+            <span class="movie-number">4</span>
             <img
               src="https://resizing.flixster.com/C37haWxoxG5HqqIx3RRrc8N047k=/fit-in/352x330/v2/https://resizing.flixster.com/-XZAfHZM39UwaGJIFWKAE8fS0ak=/v3/t/assets/p11682476_b_h8_af.jpg"
             />
@@ -175,8 +170,27 @@
       </section>
     </main>
 
-    <footer>
+    <footer class="footer">
       <p>MoviePlanet. 2025</p>
+      <span class="created-by"
+        >Created by
+        <a
+          class="created-by-author"
+          href="https://github.com/alenj0x1/movie-planet"
+          target="_blank"
+          >alenj0x1</a
+        >
+      </span>
+
+      <span class="created-by"
+        >Source:
+        <a
+          class="created-by-author"
+          href="https://github.com/alenj0x1"
+          target="_blank"
+          >Github</a
+        >
+      </span>
     </footer>
   </body>
 </html>

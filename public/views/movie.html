@@ -6,45 +6,41 @@
     <title>MoviePlanet - Mr.Robot</title>
 
     <link rel="stylesheet" href="/public/styles/global.css" />
+    <link rel="stylesheet" href="/public/styles/normalize.css" />
+    <link rel="stylesheet" href="/public/styles/views/movie.css" />
   </head>
   <body>
-    <div>
-      <img
-        src="https://guayoyoenletras.net/wp-content/uploads/2016/01/MR%20ROBOT%201.jpg"
-        alt="Mr robot fondo"
-        height="400"
-      />
-    </div>
+    <div class="background-movie"></div>
 
-    <header>
+    <header class="header">
       <nav>
-        <a href="/">
-          <h1 class="brand">MoviePlanet</h1>
+        <a id="brand" href="/">
+          <h1>MoviePlanet</h1>
         </a>
 
-        <ul>
-          <li>
-            <a href="/">Inicio</a>
+        <ul class="nav-list">
+          <li class="nav-item">
+            <a href="/" class="nav-item-link">Inicio</a>
           </li>
 
-          <li>
-            <a href="">Series</a>
+          <li class="nav-item">
+            <a href="" class="nav-item-link">Series</a>
           </li>
 
-          <li>
-            <a href="">Peliculas</a>
+          <li class="nav-item">
+            <a href="" class="nav-item-link">Peliculas</a>
           </li>
 
-          <li>
-            <a href="">Novedades populares</a>
+          <li class="nav-item">
+            <a href="" class="nav-item-link">Novedades populares</a>
           </li>
 
-          <li>
-            <a href="">Mi lista</a>
+          <li class="nav-item">
+            <a href="" class="nav-item-link">Mi lista</a>
           </li>
 
-          <li>
-            <a href="">Explora por idiomas</a>
+          <li class="nav-item">
+            <a href="" class="nav-item-link">Explora por idiomas</a>
           </li>
         </ul>
       </nav>
@@ -53,7 +49,11 @@
     <main>
       <section class="movie-description">
         <header>
-          <h2>MR.ROBOT</h2>
+          <img
+            class="movie-logo"
+            alt="Logo de Mr.Robot"
+            src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/4b/Mr._Robot_Logo.svg/2560px-Mr._Robot_Logo.svg.png"
+          />
           <p>
             Elliot, a brilliant but unstable cyber-security engineer and
             vigilante hacker, becomes a key figure in a complex game of global
@@ -62,13 +62,37 @@
           </p>
         </header>
 
-        <div>
-          <button>Reproducir</button>
-          <button>Más información</button>
-        </div>
+        <section class="movie-actions">
+          <button class="btn btn-primary">Reproducir</button>
+          <button class="btn btn-secondary">Más información</button>
+        </section>
       </section>
 
       <section id="trading-now">
+        <article>
+          <img
+            height="200"
+            alt="Caratula de MR.Robot "
+            src="https://cdn-images.dzcdn.net/images/cover/126369ae39d3524f33a4a877ba40de09/1900x1900-000000-81-0-0.jpg"
+          />
+        </article>
+
+        <article>
+          <img
+            height="200"
+            alt="Caratula de MR.Robot "
+            src="https://cdn-images.dzcdn.net/images/cover/126369ae39d3524f33a4a877ba40de09/1900x1900-000000-81-0-0.jpg"
+          />
+        </article>
+
+        <article>
+          <img
+            height="200"
+            alt="Caratula de MR.Robot "
+            src="https://cdn-images.dzcdn.net/images/cover/126369ae39d3524f33a4a877ba40de09/1900x1900-000000-81-0-0.jpg"
+          />
+        </article>
+
         <article>
           <img
             height="200"
@@ -139,8 +163,27 @@
       </ul>
     </aside>
 
-    <footer>
+    <footer class="footer">
       <p>MoviePlanet. 2025</p>
+      <span class="created-by"
+        >Created by
+        <a
+          class="created-by-author"
+          href="https://github.com/alenj0x1/movie-planet"
+          target="_blank"
+          >alenj0x1</a
+        >
+      </span>
+
+      <span class="created-by"
+        >Source:
+        <a
+          class="created-by-author"
+          href="https://github.com/alenj0x1"
+          target="_blank"
+          >Github</a
+        >
+      </span>
     </footer>
   </body>
 </html>
